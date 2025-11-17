@@ -6,229 +6,300 @@
 <style>
     body {
         font-family: Arial, sans-serif;
-        background: #f3f3f3;
-        margin: 0;
-        padding: 20px;
-        color: #222;
+        background: #1c1c1c;
+        margin: 10px;
+        padding: 10px;
+        color: #eee;
+    }
+
+    #progress {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 15px;
+        color: #f3f3f3;
+        font-weight: bold;
     }
 
     h1 {
-        margin-top: 40px;
-        font-size: 32px;
-        color: #333;
+        margin: 20px 0 10px 0;
+        font-size: 28px;
+        color: #f3f3f3;
         text-align: center;
     }
 
     h2 {
-        margin-top: 30px;
-        font-size: 24px;
-        color: #444;
-        border-left: 5px solid #888;
-        padding-left: 10px;
+        margin: 15px 0 10px 0;
+        font-size: 20px;
+        color: #ddd;
+        border-left: 4px solid #888;
+        padding-left: 8px;
     }
 
     .section {
-        background: white;
-        padding: 20px;
-        border-radius: 10px;
-        margin-top: 20px;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        background: #2b2b2b;
+        padding: 15px;
+        border-radius: 12px;
+        margin: 15px auto;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+        max-width: 600px;
+    }
+
+    .section-progress {
+        text-align: right;
+        color: #f3f3f3;
+        margin-bottom: 5px;
+        font-size: 16px;
     }
 
     ul {
         list-style: none;
         padding-left: 0;
-        margin: 10px 0;
+        margin: 5px 0;
     }
 
     li {
         margin: 6px 0;
-        padding: 4px 0;
-        font-size: 16px;
+        padding: 6px 10px;
+        font-size: 17px;
         display: flex;
         align-items: center;
+        background: #3a3a3a;
+        border-radius: 8px;
+        transition: background 0.2s;
+    }
+
+    li:hover {
+        background: #4a4a4a;
     }
 
     input[type="checkbox"] {
-        transform: scale(1.3);
-        margin-right: 10px;
+        transform: scale(1.5);
+        margin-right: 12px;
         cursor: pointer;
     }
 </style>
 </head>
 <body>
 
+<div id="progress">ZROBILES 0%</div>
+
 <!-- ====================== BRONIE ====================== -->
-
 <h1>Weapons</h1>
+<div class="section" id="weapons-section">
+  <div class="section-progress">ZROBILES 0% Weapons</div>
+  
+  <h2>Soul Weapons</h2>
+  <ul>
+    <li><input type="checkbox"> Moonlight Butterfly Horn</li>
+    <li><input type="checkbox"> Crystal Ring Shield</li>
+    <li><input type="checkbox"> Quelaag's Furysword</li>
+    <li><input type="checkbox"> Chaos Blade</li>
+    <li><input type="checkbox"> Greatsword of Artorias (Cursed)</li>
+    <li><input type="checkbox"> Greatsword of Artorias</li>
+    <li><input type="checkbox"> Greatshield of Artorias</li>
+    <li><input type="checkbox"> Golem Axe</li>
+    <li><input type="checkbox"> Dragon Bone Fist</li>
+    <li><input type="checkbox"> Lifehunt Scythe</li>
+    <li><input type="checkbox"> Dragonslayer Spear</li>
+    <li><input type="checkbox"> Smough's Hammer</li>
+    <li><input type="checkbox"> Darkmoon Bow</li>
+    <li><input type="checkbox"> Tin Darkmoon Catalyst</li>
+    <li><input type="checkbox"> Great Lord Greatsword</li>
+  </ul>
 
-<div class="section">
-<h2>Soul Weapons</h2>
-<ul>
-  <li><input type="checkbox"> Moonlight Butterfly Horn</li>
-  <li><input type="checkbox"> Crystal Ring Shield</li>
-  <li><input type="checkbox"> Quelaag's Furysword</li>
-  <li><input type="checkbox"> Chaos Blade</li>
-  <li><input type="checkbox"> Greatsword of Artorias (Cursed)</li>
-  <li><input type="checkbox"> Greatsword of Artorias</li>
-  <li><input type="checkbox"> Greatshield of Artorias</li>
-  <li><input type="checkbox"> Golem Axe</li>
-  <li><input type="checkbox"> Dragon Bone Fist</li>
-  <li><input type="checkbox"> Lifehunt Scythe</li>
-  <li><input type="checkbox"> Dragonslayer Spear</li>
-  <li><input type="checkbox"> Smough's Hammer</li>
-  <li><input type="checkbox"> Darkmoon Bow</li>
-  <li><input type="checkbox"> Tin Darkmoon Catalyst</li>
-  <li><input type="checkbox"> Great Lord Greatsword</li>
-</ul>
+  <h2>Tail Cutoffs</h2>
+  <ul>
+    <li><input type="checkbox"> Drake Sword</li>
+    <li><input type="checkbox"> Dragon King Greataxe</li>
+    <li><input type="checkbox"> Priscilla's Dagger</li>
+    <li><input type="checkbox"> Moonlight Greatsword</li>
+    <li><input type="checkbox"> Dragon Greatsword</li>
+  </ul>
 
-<h2>Tail Cutoffs</h2>
-<ul>
-  <li><input type="checkbox"> Drake Sword</li>
-  <li><input type="checkbox"> Dragon King Greataxe</li>
-  <li><input type="checkbox"> Priscilla's Dagger</li>
-  <li><input type="checkbox"> Moonlight Greatsword</li>
-  <li><input type="checkbox"> Dragon Greatsword</li>
-</ul>
+  <h2>Covenant Weapons</h2>
+  <ul>
+    <li><input type="checkbox"> Gravelord Sword</li>
+    <li><input type="checkbox"> Dark Hand</li>
+  </ul>
 
-<h2>Covenant Weapons</h2>
-<ul>
-  <li><input type="checkbox"> Gravelord Sword</li>
-  <li><input type="checkbox"> Dark Hand</li>
-</ul>
+  <h2>Enemy Drops</h2>
+  <ul>
+    <li><input type="checkbox"> Black Knight Sword</li>
+    <li><input type="checkbox"> Black Knight Greatsword</li>
+    <li><input type="checkbox"> Black Knight Greataxe</li>
+    <li><input type="checkbox"> Black Knight Halberd</li>
+    <li><input type="checkbox"> Black Knight Shield</li>
+    <li><input type="checkbox"> Channeler's Trident</li>
+    <li><input type="checkbox"> Crescent Axe</li>
+    <li><input type="checkbox"> Crest Shield</li>
+    <li><input type="checkbox"> Giant's Halberd</li>
+    <li><input type="checkbox"> Silver Knight Straight Sword</li>
+    <li><input type="checkbox"> Silver Knight Spear</li>
+    <li><input type="checkbox"> Silver Knight Shield</li>
+    <li><input type="checkbox"> Stone Greatsword</li>
+    <li><input type="checkbox"> Stone Greatshield</li>
+    <li><input type="checkbox"> Grant</li>
+    <li><input type="checkbox"> Sanctus</li>
+  </ul>
 
-<h2>Enemy Drops</h2>
-<ul>
-  <li><input type="checkbox"> Black Knight Sword</li>
-  <li><input type="checkbox"> Black Knight Greatsword</li>
-  <li><input type="checkbox"> Black Knight Greataxe</li>
-  <li><input type="checkbox"> Black Knight Halberd</li>
-  <li><input type="checkbox"> Black Knight Shield</li>
-  <li><input type="checkbox"> Channeler's Trident</li>
-  <li><input type="checkbox"> Crescent Axe</li>
-  <li><input type="checkbox"> Crest Shield</li>
-  <li><input type="checkbox"> Giant's Halberd</li>
-  <li><input type="checkbox"> Silver Knight Straight Sword</li>
-  <li><input type="checkbox"> Silver Knight Spear</li>
-  <li><input type="checkbox"> Silver Knight Shield</li>
-  <li><input type="checkbox"> Stone Greatsword</li>
-  <li><input type="checkbox"> Stone Greatshield</li>
-  <li><input type="checkbox"> Grant</li>
-  <li><input type="checkbox"> Sanctus</li>
-</ul>
-
-<h2>Corpse/Chest Loots</h2>
-<ul>
-  <li><input type="checkbox"> Dragon Crest Shield</li>
-  <li><input type="checkbox"> Havel's Greatshield</li>
-  <li><input type="checkbox"> Dragon Tooth</li>
-  <li><input type="checkbox"> Dragonslayer Greatbow</li>
-  <li><input type="checkbox"> Velka's Rapier</li>
-  <li><input type="checkbox"> Astora's Straight Sword</li>
-  <li><input type="checkbox"> Bloodshield</li>
-  <li><input type="checkbox"> Black Iron Greatshield</li>
-  <li><input type="checkbox"> Effigy Shield</li>
-</ul>
+  <h2>Corpse/Chest Loots</h2>
+  <ul>
+    <li><input type="checkbox"> Dragon Crest Shield</li>
+    <li><input type="checkbox"> Havel's Greatshield</li>
+    <li><input type="checkbox"> Dragon Tooth</li>
+    <li><input type="checkbox"> Dragonslayer Greatbow</li>
+    <li><input type="checkbox"> Velka's Rapier</li>
+    <li><input type="checkbox"> Astora's Straight Sword</li>
+    <li><input type="checkbox"> Bloodshield</li>
+    <li><input type="checkbox"> Black Iron Greatshield</li>
+    <li><input type="checkbox"> Effigy Shield</li>
+  </ul>
 </div>
 
 <!-- ====================== CZARY ====================== -->
-
 <h1>Sorceries</h1>
-
 <div class="section">
-<ul>
-  <li><input type="checkbox"> Aural Decoy</li>
-  <li><input type="checkbox"> Cast Light</li>
-  <li><input type="checkbox"> Chameleon</li>
-  <li><input type="checkbox"> Crystal Magic Weapon</li>
-  <li><input type="checkbox"> Crystal Soul Spear</li>
-  <li><input type="checkbox"> Dark Bead</li>
-  <li><input type="checkbox"> Dark Fog</li>
-  <li><input type="checkbox"> Dark Orb</li>
-  <li><input type="checkbox"> Fall Control</li>
-  <li><input type="checkbox"> Great Heavy Soul Arrow</li>
-  <li><input type="checkbox"> Great Magic Weapon</li>
-  <li><input type="checkbox"> Great Soul Arrow</li>
-  <li><input type="checkbox"> Heavy Soul Arrow</li>
-  <li><input type="checkbox"> Hidden Body</li>
-  <li><input type="checkbox"> Hidden Weapon</li>
-  <li><input type="checkbox"> Homing Crystal Soulmass</li>
-  <li><input type="checkbox"> Homing Soulmass</li>
-  <li><input type="checkbox"> Hush</li>
-  <li><input type="checkbox"> Magic Shield</li>
-  <li><input type="checkbox"> Magic Weapon</li>
-  <li><input type="checkbox"> Pursuers</li>
-  <li><input type="checkbox"> Remedy</li>
-  <li><input type="checkbox"> Repair</li>
-  <li><input type="checkbox"> Resist Curse</li>
-  <li><input type="checkbox"> Soul Arrow</li>
-  <li><input type="checkbox"> Soul Spear</li>
-  <li><input type="checkbox"> Strong Magic Shield</li>
-  <li><input type="checkbox"> White Dragon Breath</li>
-</ul>
+  <div class="section-progress">ZROBILES 0% Sorceries</div>
+  <ul>
+    <li><input type="checkbox"> Aural Decoy</li>
+    <li><input type="checkbox"> Cast Light</li>
+    <li><input type="checkbox"> Chameleon</li>
+    <li><input type="checkbox"> Crystal Magic Weapon</li>
+    <li><input type="checkbox"> Crystal Soul Spear</li>
+    <li><input type="checkbox"> Dark Bead</li>
+    <li><input type="checkbox"> Dark Fog</li>
+    <li><input type="checkbox"> Dark Orb</li>
+    <li><input type="checkbox"> Fall Control</li>
+    <li><input type="checkbox"> Great Heavy Soul Arrow</li>
+    <li><input type="checkbox"> Great Magic Weapon</li>
+    <li><input type="checkbox"> Great Soul Arrow</li>
+    <li><input type="checkbox"> Heavy Soul Arrow</li>
+    <li><input type="checkbox"> Hidden Body</li>
+    <li><input type="checkbox"> Hidden Weapon</li>
+    <li><input type="checkbox"> Homing Crystal Soulmass</li>
+    <li><input type="checkbox"> Homing Soulmass</li>
+    <li><input type="checkbox"> Hush</li>
+    <li><input type="checkbox"> Magic Shield</li>
+    <li><input type="checkbox"> Magic Weapon</li>
+    <li><input type="checkbox"> Pursuers</li>
+    <li><input type="checkbox"> Remedy</li>
+    <li><input type="checkbox"> Repair</li>
+    <li><input type="checkbox"> Resist Curse</li>
+    <li><input type="checkbox"> Soul Arrow</li>
+    <li><input type="checkbox"> Soul Spear</li>
+    <li><input type="checkbox"> Strong Magic Shield</li>
+    <li><input type="checkbox"> White Dragon Breath</li>
+  </ul>
 </div>
 
 <!-- ====================== PIROMANCJE ====================== -->
-
 <h1>Pyromancies</h1>
-
 <div class="section">
-<ul>
-  <li><input type="checkbox"> Acid Surge</li>
-  <li><input type="checkbox"> Black Flame</li>
-  <li><input type="checkbox"> Chaos Fire Whip</li>
-  <li><input type="checkbox"> Chaos Storm</li>
-  <li><input type="checkbox"> Combustion</li>
-  <li><input type="checkbox"> Fire Orb</li>
-  <li><input type="checkbox"> Fire Surge</li>
-  <li><input type="checkbox"> Fire Tempest</li>
-  <li><input type="checkbox"> Fire Whip</li>
-  <li><input type="checkbox"> Fireball</li>
-  <li><input type="checkbox"> Firestorm</li>
-  <li><input type="checkbox"> Flash Sweat</li>
-  <li><input type="checkbox"> Great Chaos Fireball</li>
-  <li><input type="checkbox"> Great Combustion</li>
-  <li><input type="checkbox"> Great Fireball</li>
-  <li><input type="checkbox"> Iron Flesh</li>
-  <li><input type="checkbox"> Poison Mist</li>
-  <li><input type="checkbox"> Power Within</li>
-  <li><input type="checkbox"> Toxic Mist</li>
-  <li><input type="checkbox"> Undead Rapport</li>
-</ul>
+  <div class="section-progress">ZROBILES 0% Pyromancies</div>
+  <ul>
+    <li><input type="checkbox"> Acid Surge</li>
+    <li><input type="checkbox"> Black Flame</li>
+    <li><input type="checkbox"> Chaos Fire Whip</li>
+    <li><input type="checkbox"> Chaos Storm</li>
+    <li><input type="checkbox"> Combustion</li>
+    <li><input type="checkbox"> Fire Orb</li>
+    <li><input type="checkbox"> Fire Surge</li>
+    <li><input type="checkbox"> Fire Tempest</li>
+    <li><input type="checkbox"> Fire Whip</li>
+    <li><input type="checkbox"> Fireball</li>
+    <li><input type="checkbox"> Firestorm</li>
+    <li><input type="checkbox"> Flash Sweat</li>
+    <li><input type="checkbox"> Great Chaos Fireball</li>
+    <li><input type="checkbox"> Great Combustion</li>
+    <li><input type="checkbox"> Great Fireball</li>
+    <li><input type="checkbox"> Iron Flesh</li>
+    <li><input type="checkbox"> Poison Mist</li>
+    <li><input type="checkbox"> Power Within</li>
+    <li><input type="checkbox"> Toxic Mist</li>
+    <li><input type="checkbox"> Undead Rapport</li>
+  </ul>
 </div>
 
 <!-- ====================== CUDA ====================== -->
-
 <h1>Miracles</h1>
-
 <div class="section">
-<ul>
-  <li><input type="checkbox"> Bountiful Sunlight</li>
-  <li><input type="checkbox"> Darkmoon Blade</li>
-  <li><input type="checkbox"> Emit Force</li>
-  <li><input type="checkbox"> Force</li>
-  <li><input type="checkbox"> Gravelord Greatsword Dance</li>
-  <li><input type="checkbox"> Gravelord Sword Dance</li>
-  <li><input type="checkbox"> Great Heal Excerpt</li>
-  <li><input type="checkbox"> Great Heal</li>
-  <li><input type="checkbox"> Great Lightning Spear</li>
-  <li><input type="checkbox"> Great Magic Barrier</li>
-  <li><input type="checkbox"> Heal</li>
-  <li><input type="checkbox"> Homeward</li>
-  <li><input type="checkbox"> Karmic Justice</li>
-  <li><input type="checkbox"> Lightning Spear</li>
-  <li><input type="checkbox"> Magic Barrier</li>
-  <li><input type="checkbox"> Replenishment</li>
-  <li><input type="checkbox"> Seek Guidance</li>
-  <li><input type="checkbox"> Soothing Sunlight</li>
-  <li><input type="checkbox"> Sunlight Blade</li>
-  <li><input type="checkbox"> Sunlight Spear</li>
-  <li><input type="checkbox"> Tranquil Walk of Peace</li>
-  <li><input type="checkbox"> Vow of Silence</li>
-  <li><input type="checkbox"> Wrath of the Gods</li>
-</ul>
+  <div class="section-progress">ZROBILES 0% Miracles</div>
+  <ul>
+    <li><input type="checkbox"> Bountiful Sunlight</li>
+    <li><input type="checkbox"> Darkmoon Blade</li>
+    <li><input type="checkbox"> Emit Force</li>
+    <li><input type="checkbox"> Force</li>
+    <li><input type="checkbox"> Gravelord Greatsword Dance</li>
+    <li><input type="checkbox"> Gravelord Sword Dance</li>
+    <li><input type="checkbox"> Great Heal Excerpt</li>
+    <li><input type="checkbox"> Great Heal</li>
+    <li><input type="checkbox"> Great Lightning Spear</li>
+    <li><input type="checkbox"> Great Magic Barrier</li>
+    <li><input type="checkbox"> Heal</li>
+    <li><input type="checkbox"> Homeward</li>
+    <li><input type="checkbox"> Karmic Justice</li>
+    <li><input type="checkbox"> Lightning Spear</li>
+    <li><input type="checkbox"> Magic Barrier</li>
+    <li><input type="checkbox"> Replenishment</li>
+    <li><input type="checkbox"> Seek Guidance</li>
+    <li><input type="checkbox"> Soothing Sunlight</li>
+    <li><input type="checkbox"> Sunlight Blade</li>
+    <li><input type="checkbox"> Sunlight Spear</li>
+    <li><input type="checkbox"> Tranquil Walk of Peace</li>
+    <li><input type="checkbox"> Vow of Silence</li>
+    <li><input type="checkbox"> Wrath of the Gods</li>
+  </ul>
 </div>
+
+<script>
+  const globalProgressText = document.getElementById('progress');
+  const allCheckboxes = document.querySelectorAll('input[type="checkbox"]');
+  
+  const weaponsSection = document.getElementById('weapons-section');
+  const otherSections = document.querySelectorAll('.section:not(#weapons-section)');
+
+  function updateGlobalProgress() {
+      const total = allCheckboxes.length;
+      const checked = document.querySelectorAll('input[type="checkbox"]:checked').length;
+      const percent = ((checked / total) * 100).toFixed(2);
+      globalProgressText.textContent = `ZROBILES ${percent}%`;
+  }
+
+  function updateWeaponsProgress() {
+      const checkboxes = weaponsSection.querySelectorAll('input[type="checkbox"]');
+      const checked = weaponsSection.querySelectorAll('input[type="checkbox"]:checked').length;
+      const percent = ((checked / checkboxes.length) * 100).toFixed(2);
+      const progressDiv = weaponsSection.querySelector('.section-progress');
+      if(progressDiv) {
+          progressDiv.textContent = `ZROBILES ${percent}% Weapons`;
+      }
+  }
+
+  function updateSectionProgress(section) {
+      const checkboxes = section.querySelectorAll('input[type="checkbox"]');
+      const checked = section.querySelectorAll('input[type="checkbox"]:checked').length;
+      const percent = ((checked / checkboxes.length) * 100).toFixed(2);
+      const progressDiv = section.querySelector('.section-progress');
+      const sectionName = section.querySelector('h2') ? section.querySelector('h2').innerText : 'Sekcja';
+      if(progressDiv) {
+          progressDiv.textContent = `ZROBILES ${percent}% ${sectionName}`;
+      }
+  }
+
+  function updateAllProgress() {
+      updateGlobalProgress();
+      updateWeaponsProgress();
+      otherSections.forEach(section => updateSectionProgress(section));
+  }
+
+  allCheckboxes.forEach(cb => {
+      cb.addEventListener('change', updateAllProgress);
+  });
+
+  updateAllProgress();
+</script>
 
 </body>
 </html>
+
 

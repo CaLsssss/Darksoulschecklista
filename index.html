@@ -275,16 +275,24 @@
       }
   }
 
-  function updateSectionProgress(section) {
-      const checkboxes = section.querySelectorAll('input[type="checkbox"]');
-      const checked = section.querySelectorAll('input[type="checkbox"]:checked').length;
-      const percent = ((checked / checkboxes.length) * 100).toFixed(2);
-      const progressDiv = section.querySelector('.section-progress');
-      const sectionName = section.querySelector('h2') ? section.querySelector('h2').innerText : 'Sekcja';
-      if(progressDiv) {
-          progressDiv.textContent = `ZROBILES ${percent}% ${sectionName}`;
-      }
-  }
+function updateSectionProgress(section) {
+    const checkboxes = section.querySelectorAll('input[type="checkbox"]');
+    const checked = section.querySelectorAll('input[type="checkbox"]:checked').length;
+    const percent = ((checked / checkboxes.length) * 100).toFixed(2);
+    const progressDiv = section.querySelector('.section-progress');
+
+    // Pobieramy nazwę sekcji z nagłówka h1 lub h2
+    let sectionName = 'Sekcja';
+    const h1 = section.previousElementSibling;
+    if (h1 && h1.tagName === 'H1') {
+        sectionName = h1.innerText;
+    }
+
+    if(progressDiv) {
+        progressDiv.textContent = `ZROBILES ${percent}% ${sectionName}`;
+    }
+}
+
 
   function updateAllProgress() {
       updateGlobalProgress();
